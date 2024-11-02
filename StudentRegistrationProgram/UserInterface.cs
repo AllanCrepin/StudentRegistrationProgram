@@ -153,11 +153,14 @@ namespace StudentRegistrationProgram
             if(students.Count > 1)
             {
                 choice = ConsoleHelper.Ask("Ange ID:");
-                if (int.TryParse(choice, out idAsInt) && StudentManager.StudentExists(idAsInt))
+                if (int.TryParse(choice, out idAsInt))
+                {
                     selectedStudent = StudentManager.GetStudentFromId(idAsInt);
+                }
                 else
+                {
                     Console.WriteLine("Student med angivet ID hittades inte."); return;
-
+                }
             }
             else
             {
