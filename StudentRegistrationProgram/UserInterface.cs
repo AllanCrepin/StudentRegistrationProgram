@@ -176,7 +176,7 @@ namespace StudentRegistrationProgram
             Console.WriteLine($"Nuvarande ort: {selectedStudent.City}");
             string newCity = ConsoleHelper.Ask("Ange ny ort (lämna tomt för att behålla):");
 
-            bool updated = StudentManager.UpdateStudent(idAsInt, newFirstName, newLastName, newCity);
+            bool updated = StudentManager.UpdateStudent(selectedStudent.StudentId, newFirstName, newLastName, newCity);
 
             if (updated)
                 Console.WriteLine("Studentuppgifter uppdaterade.");

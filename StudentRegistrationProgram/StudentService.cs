@@ -94,6 +94,7 @@ namespace StudentRegistrationProgram
             if (!string.IsNullOrEmpty(newLastName)) student.LastName = newLastName;
             if (!string.IsNullOrEmpty(newCity)) student.City = newCity;
 
+            
             context.SaveChanges();
             return true;
         }
